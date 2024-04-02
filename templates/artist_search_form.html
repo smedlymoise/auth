@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for an Artist</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Search for an Artist</h1>
+    <form method="post">
+     <div class="form-button">
+        <label for="artist_name">Enter artist name:</label><br>
+        <input type="text" id="artist_name" name="artist_name" placeholder="Artist Name"><br>
+        <input type="submit" value="Submit">
+    </div>
+    </form>
+</body>
+</html>

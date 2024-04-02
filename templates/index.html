@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Tracks</title>
+</head>
+<body>
+    <h1>Spotify Tracks</h1>
+    <ul>
+        {% for track in tracks %}
+            <li>
+                <h2>{{ track.name }}</h2>
+                <p>Album: {{ track.album.name }}</p>
+                <p>Artists: 
+                    {% for artist in track.artists %}
+                        {{ artist.name }}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+                <img src="{{ track.album.images[0].url }}" alt="Album Art">
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

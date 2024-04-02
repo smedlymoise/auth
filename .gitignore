@@ -1,0 +1,7 @@
+#ignore dependecies 
+venv
+
+#ignore .env
+.env
+
+.pyc

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Search Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Top Tracks by {{ artist }}</h1>
+    <div class="album-grid">
+        {% for track in top_tracks %}
+            <div class="album-item">
+                <h3>{{ track.track }}</h3>
+                <p>Album: {{ track.album }}</p>
+                <img src="{{ track.album_image }}" alt="{{ track.album }}">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
