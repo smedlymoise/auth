@@ -4,4 +4,4 @@ venv
 #ignore .env
 .env
 
-.pyc
+__pycache__
