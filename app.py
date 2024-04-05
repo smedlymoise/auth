@@ -3,14 +3,14 @@ import requests
 import os
 from datetime import datetime, timedelta
 from flask import Flask, redirect, request, jsonify, session, render_template
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 
 
 app = Flask(__name__)
 
 # Load environment variables from .env file
-load_dotenv()
+#load_dotenv()
 
 # Access environment variables
 app.secret_key = os.getenv("key_secret")
